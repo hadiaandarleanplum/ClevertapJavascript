@@ -33,8 +33,6 @@ clevertap.onUserLogin.push({
 })
 
 //send event to clevertap on button click
-//function myFunction() {
-  clevertap.event.push('myFunctionEvent');
-//}
-
-//yes
+function myFunction() {
+  clevertap.event.push('Charged');
+}
