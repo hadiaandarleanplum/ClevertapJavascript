@@ -1,6 +1,6 @@
 var clevertap = {event:[], profile:[], account:[], onUserLogin:[], region:'us1', notifications:[], privacy:[]};
  // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-clevertap.account.push({"id": "WRZ-KK5-656Z"});
+clevertap.account.push({"id": "RKR-Z99-876Z"});
 //clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
 //clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
  (function () {
@@ -12,6 +12,19 @@ clevertap.account.push({"id": "WRZ-KK5-656Z"});
          s.parentNode.insertBefore(wzrk, s);
   })();
   clevertap.spa = true
+
+
+    window.onload = function() {
+    // Your JavaScript code here
+    console.log('Page has fully loaded');
+
+    clevertap.notificationCallback = function(msg){
+        console.log(JSON.stringify(msg));
+
+        clevertap.renderNotificationViewed(msg);
+    };
+};
+
 
 // with the exception of one of Identity, Email, or FBID
 // each of the following fields is optional

@@ -1,15 +1,27 @@
-<DOCTYPE! html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverTap Integration</title>
 </head>
 
 <body>
-	<a href="page2.html">
-		<button onclick="myFunction()">Click me</button>
-	</a>
 
+    <button id="initializeButton">Init CleverTap</button>
+    <button id="loginButton">Login to CleverTap</button>
+    <button id="triggerEvent">Click me (Trigger Event)</button>
+    <button id="loadCustomInboxMessages">Load Custom Web Inbox Messages</button>
+    <button id="test">Web INBOX</button>
+
+    <!-- Button that links to page2.html -->
+    <a href="page2.html">
+        <button>Go to Page 2</button>
+    </a>
+
+    <!-- Link to the external JavaScript file (Placed at the end for better performance) -->
+    <script src="clevertap_init_with_custom_web_inbox.js"></script>
 
 </body>
 
